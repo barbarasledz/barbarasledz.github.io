@@ -1,15 +1,15 @@
 primary_nav_values = [
     {
         "text": "About",
-        "url": ""
+        "url": "about.html"
     },
     {
         "text": "Past Projects",
-        "url": ""
+        "url": "pastprojects.html"
     },
     {
         "text": "Current Work",
-        "url": ""
+        "url": "currentwork.html"
     }
 ]
 
@@ -32,15 +32,15 @@ const make_nav_entry = (text, url, is_active = False) => {
     if (is_active) {
         template =
             `
-            <a class="nav_link" href="${url}">
-            <div class="nav_div active_nav">${text}</div>
+            <a href="${url}">
+            <div class="active_nav">${text}</div>
             </a>
             `
     } else {
         template = 
             `
-            <a class="nav_link" href="${url}">
-            <div class="nav_div">${text}</div>
+            <a href="${url}">
+            <div>${text}</div>
             </a>
             `
     }
