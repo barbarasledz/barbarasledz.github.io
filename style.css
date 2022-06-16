@@ -15,7 +15,8 @@
     --accentDark: hsl(244, 20%, 18%);
     --accentLight: hsl(207, 74%, 85%);
     --accentStrong: hsl(204, 55%, 61%);
-    --accentMid:hsl(207, 40%, 35%);
+    --accentMid:hsl(207, 40%, 40%);
+    --accentStrongLight: hsl(204, 55%, 74%);
 }
 /* ============================= */ 
 /* General styling for the whole document */ 
@@ -23,11 +24,29 @@
 html, body {
     background-color: var(--background_html);
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Helvetica, sans-serif;
 }
 h1, h2, h3 {
     font-family: 'Times New Roman', Times, serif;
-    color:var(--accentStrong)
+    color:var(--accentMid)
+}
+p {
+    margin: 10px 0px;
+}
+ul, ol {
+    padding-left: 40px;
+}
+li {
+    margin: 4px 0px;
+}
+a:link, a:visited {
+    color: var(--accentStrong)
+}
+a:hover {
+    color: var(--accentStrongLight)
+}
+a:active {
+    color: var(--accentLight)
 }
 #content {
     width: 100vw;
@@ -111,8 +130,23 @@ nav a:first-of-type {
 }
 /* Secondary navigation is hidden by default and shown using javascript, if applicable.*/
 #secondary_nav {
-    display: hidden;
+    display: none;
 }
+
+/* ============================= */
+/* Styles for page content */
+/* ============================= */
+main {
+    padding: 10px;
+    font-size: 1.1em;
+}
+img {
+    max-width: 25%;
+    float: right;
+    margin-left: 10px;
+    min-width: 175px;
+}
+
 
 @media only screen and (min-width:1000px) {
     /* Enables content border on larger screens, when sides have large margins... useful for debugging, if nothing else */
