@@ -140,12 +140,11 @@ main {
     padding: 10px;
     font-size: 1.1em;
 }
-img {
+.main_img {
     width: 25%;
     float: right;
     margin: 0px 10px;
     min-width: 175px;
-    max-width: 400px;
 }
 
 
