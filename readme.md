@@ -9,7 +9,7 @@ This website is made primarily using HTML/CSS/JS, alongside with the Vue framewo
 
 
 ## Schedule
-- 16 June 2022 -- Creation of repository, start of design planning using low-fidelity mockups on paper. Small skeleton of an initial layout created.
+- 16 June 2022 -- Creation of repository, start of design planning using low-fidelity mockups on paper. Small skeleton of an initial layout created. Added placeholder content and began setup of multiple pages.
 
 ## Credits
  - [Color palette inspired by coloors tool](https://coolors.co/e7ecef-6096ba-a3cef1-272635-001011) 

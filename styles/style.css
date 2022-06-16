@@ -93,23 +93,23 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: stretch;
     min-height: 30px;
 }
 nav a {
     min-width: 100px;
     text-align: center;
-    border: 2px solid var(--accentDark);
-    border-left: none;
     flex-grow: 1;
     flex-basis: 1%;
     text-decoration: none;
 }
 nav a div {
+    border: 2px solid var(--accentDark);
+    border-left: none;
     padding: 8px;
 }
-nav a:first-of-type {
+nav a:first-of-type div {
     border-left: 2px solid var(--accentDark);
 }
 #primary_nav {
