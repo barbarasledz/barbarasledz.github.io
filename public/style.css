@@ -1,0 +1,124 @@
+/* CSS reset to prevent browser-specific things from messing with my website */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--darkest)
+}
+
+/* Making some variables because rewriting the same color 500 times gets old real fast... also this allows for easier and more consistent changes if I decide I don't like some color.*/
+:root {
+    --lightest: hsl(202, 60%, 97%);
+    --background_html: hsl(202, 50%, 95%);
+    --lighter:  hsl(202, 60%, 92%);
+    --darkest: hsl(244, 100%, 3%);
+    --accentDark: hsl(244, 20%, 18%);
+    --accentLight: hsl(207, 74%, 85%);
+    --accentStrong: hsl(204, 55%, 61%);
+    --accentMid:hsl(207, 40%, 35%);
+}
+/* ============================= */ 
+/* General styling for the whole document */ 
+/* ============================= */ 
+html, body {
+    background-color: var(--background_html);
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Times New Roman', Times, serif;
+    color:var(--accentStrong)
+}
+#content {
+    width: 100vw;
+    height: 100vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 0px solid var(--accentDark);
+    background-color: var(--lightest);
+}
+
+/* ============================= */
+/* Header Styling */
+/* ============================= */
+header {
+    padding: 8px 5px;
+    background-color: var(--accentDark);
+    color: var(--lighter);
+    align-items: middle;
+}
+header h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin:auto;
+    font-weight: bolder;
+}
+
+header a:link, header a:visited {
+    color: var(--lighter);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: var(--accentLight);
+    text-decoration: none;
+}
+header a:active {
+    color: var(--accentStrong);
+    text-decoration: none;
+}
+/* ============================= */
+/* nav-specific styling */
+/* ============================= */
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    min-height: 30px;
+}
+nav a {
+    min-width: 100px;
+    text-align: center;
+    border: 2px solid var(--accentDark);
+    border-left: none;
+    flex-grow: 1;
+    flex-basis: 1%;
+    text-decoration: none;
+}
+nav a div {
+    padding: 8px;
+}
+nav a:first-of-type {
+    border-left: 2px solid var(--accentDark);
+}
+#primary_nav {
+    font-size: 1.2rem;
+    background-color: var(--lighter);
+    font-weight: bold;
+}
+#primary_nav a:link {
+    color: var(--darkest);
+}
+#primary_nav a:hover{
+    color: var(--lightest);
+    background-color: var(--accentLight);
+}
+#primary_nav a:active {
+    color: var(--lightest);
+    background-color: var(--accentStrong);
+}
+/* Secondary navigation is hidden by default and shown using javascript, if applicable.*/
+#secondary_nav {
+    display: hidden;
+}
+
+@media only screen and (min-width:1000px) {
+    /* Enables content border on larger screens, when sides have large margins... useful for debugging, if nothing else */
+
+    /* #content {
+        border-width: 0px 2px;
+    } */
+    
+}
