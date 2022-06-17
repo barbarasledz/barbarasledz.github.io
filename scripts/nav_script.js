@@ -4,8 +4,8 @@ primary_nav_values = [
         "url": "about.html"
     },
     {
-        "text": "Past Projects",
-        "url": "pastprojects.html"
+        "text": "Past Work",
+        "url": "pastwork.html"
     },
     {
         "text": "Current Work",
