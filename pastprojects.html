@@ -5,7 +5,7 @@
        <link rel="stylesheet" href="styles/style.css">
    </head>
    <body>
-    <div id="content">
+    <div id="page_container">
         <header>
             <h1><a href="index.html">Barbara Sledz</a></h1>
         </header> 
@@ -15,21 +15,14 @@
         <nav id="secondary_nav"> 
             <!-- If needed, dynamically filled using nav_script -->
         </nav>
-        <main class="card_container"> 
-            <div class="card"> 
-                <img class="card_img" src="images/davl-poster.png">
-                <h2>The DAVL (Fall 2018)</h2>
-                <p>The DAVL, or "Daily Accessory for Vibrant Lifestyles", is a product designed for patients with Heartware LVAD devices who are looking for a more suitable carrying method for their device.</p>
-                <p>This project was created as part of Northwestern's Design, Thinking, and Communication (DTC) class.</p>
-            </div>
-            <div class="card"> 
-                <p>Blah 2</p> 
-            </div>
-            <div class="card"> 
-                <p>Blah 3</p> 
-            </div>
-        </main>
+        <div id="card_container_vue">
+        <!-- Filled in by Vue -->
+        </div>
     </div>
    </body>
    <script src="scripts/nav_script.js"></script>
+   <!-- Importing vue after nav is done setting up-->
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+   <!-- and now we import our actual vue-using script-->
+   <script src="scripts/past_projects.js"></script>
 </html>
