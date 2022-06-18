@@ -4,6 +4,7 @@ const cards_info = [
         type: "",
         date: "",
         image: "",
+        alt_text: "",
         desc: [""]
     },
     {
@@ -11,6 +12,7 @@ const cards_info = [
         type: "",
         date: "",
         image: "",
+        alt_text: "",
         desc: [""]
     },
     {
@@ -18,6 +20,7 @@ const cards_info = [
         type: "",
         date: "",
         image: "",
+        alt_text: "",
         desc: [""]
     },
     {
@@ -25,6 +28,7 @@ const cards_info = [
         type: "",
         date: "",
         image: "",
+        alt_text: "",
         desc: [""]
     },
     {
@@ -32,6 +36,7 @@ const cards_info = [
         type: "",
         date: "",
         image: "",
+        alt_text: "",
         desc: [""]
     },
     {
@@ -39,6 +44,7 @@ const cards_info = [
         type: "Project",
         date: "Fall 2018",
         image: "images/davl-poster.png",
+        alt_text: "Image of poster showcasing the main advantages of the DAVL design",
         desc: [
             "The DAVL, or \"Daily Accessory for Vibrant Lifestyles\", is a product designed for patients with Heartware LVAD devices who are looking for a more suitable carrying method for their device.", 
             "This project was created as part of Northwestern's Design, Thinking, and Communication (DTC) class alongside other students."

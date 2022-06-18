@@ -1,20 +1,20 @@
 Vue.component("card-item", {
     template: `
     <div class="card">
-        <img class="card_img" :src="image">
+        <img class="card_img" :src="image" :alt="alt_text">
         <h2>{{name}}</h2>
         <h3>{{type}}, {{date}}</h3>
         <p v-for="par in desc">{{par}}</p>
     </div>
     `,
-    props: ["name", "desc", "image", "date", "type"]
+    props: ["name", "desc", "image", "date", "type", "alt_text"]
 })
 
 new Vue({
     el: "#card_container_vue", 
     template: `
     <main class="card_container"> 
-    <card-item v-for="card_info in cards_info" :key="card_info.name" :name="card_info.name" :desc="card_info.desc" :image="card_info.image" :type="card_info.type" :date="card_info.date"></card-item>
+    <card-item v-for="card_info in cards_info" :key="card_info.name" :name="card_info.name" :desc="card_info.desc" :image="card_info.image" :type="card_info.type" :date="card_info.date" :alt_text="card_info.alt_text"></card-item>
     </main>
     `,
     data: {
