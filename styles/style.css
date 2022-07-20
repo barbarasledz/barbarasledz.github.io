@@ -164,7 +164,8 @@ main {
 }
 .card {
     padding: 10px;
-    width: 275px;
+    min-width: 275px;
+    flex-basis: 275px;
     min-height: 400px;
     margin: 10px;
     overflow: hidden;
@@ -172,11 +173,12 @@ main {
     border: 2px solid var(--accentStrong);
     background-color: var(--background_html);
     border-radius: 0.2rem;
+    flex-grow: 1;
 }
     
 .card_img {
     width: 100%;
-    max-height: 80%;
+    max-height: 200px;
     object-fit:scale-down;
     position: top;
     margin-bottom: 10px;
