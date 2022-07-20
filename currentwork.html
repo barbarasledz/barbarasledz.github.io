@@ -15,10 +15,15 @@
         <nav id="secondary_nav"> 
             <!-- If needed, dynamically filled using nav_script -->
         </nav>
-        <main>
-            
-        </main>
+        <div id="card_container_vue">
+            <!-- Filled in by Vue -->
+        </div>
     </div>
    </body>
    <script src="scripts/nav_script.js"></script>
+      <!-- Importing vue after nav is done setting up-->
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+      <!-- and now we import our actual vue-using script-->
+      <script src="scripts/curr_work.js"></script>
+      <script src="scripts/vue_cards.js"></script>
 </html>
