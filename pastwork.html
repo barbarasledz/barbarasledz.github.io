@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <title>Past Work -- Barbara Sledz</title>  
+       <link rel="stylesheet" href="styles/style.css">
+   </head>
+   <body>
+    <div id="page_container">
+        <header>
+            <h1><a href="index.html">Barbara Sledz</a></h1>
+        </header> 
+        <nav id="primary_nav" data-current="Past Work"> 
+            <!-- Dynamically filled using nav_script -->
+        </nav>
+        <nav id="secondary_nav"> 
+            <!-- If needed, dynamically filled using nav_script -->
+        </nav>
+        <div id="card_container_vue">
+        <!-- Filled in by Vue -->
+        </div>
+    </div>
+   </body>
+   <script src="scripts/nav_script.js"></script>
+   <!-- Importing vue after nav is done setting up-->
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+   <!-- and now we import our actual vue-using script-->
+   <script src="scripts/past_work.js"></script>
+   <script src="scripts/vue_cards.js"></script>
+</html>
