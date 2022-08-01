@@ -16,11 +16,11 @@ const life_story = [
         time: "Starting in the US",
         text: [
             "The first few years in the US were difficult. My parents and I knew barely any English -- I had learned my first two words in English on the plane to the US, and one of them was \"hello\".",
-            "We ended up in Chicago. Barely a few days later, I was enrolled in the local public elementary school for kindergarten. I had been incredibly lucky -- the kindergarten teacher was Polish and more than willing to help me adjust to a new life in a new and weird country. I don't know how I would have gotten through that first year at all without her.",
+            "We ended up in Chicago. Barely a few days later, I was enrolled in the local public elementary school for kindergarten.",
             "The next few years of my life were rough. School was difficult, and I could not rely on my parents being able to help me with reading or history homework in English.",
             "But, despite the odds, things were starting to improve for me in school eventually.",
             "Then, sudden change -- my family bought a house in a different part of the city. It was our first ever house in the US and full of problems, but it was ours. Unfortunately, this also meant me needing to go to a new school. Back to square one.",
-            "I managed. Somehow. I ended up making new friends, some of whom are still among my best friends to this day.",
+            "Somehow, I managed. I ended up making new friends, some of whom are still among my best friends to this day.",
             "I started doing better academically around the time of middle school. Then, during eighth grade, I not only earned good grades but also got accepted into one of the top selective enrollment schools in the city -- Northside College Prep."
         ],
         image: "",
