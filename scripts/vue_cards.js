@@ -2,7 +2,7 @@ Vue.component("card-item", {
     template: `
     <div class="card">
         <h2>{{name}}</h2>
-        <h3>{{type}}, {{date}}</h3>
+        <h4>{{type}}, {{date}}</h4>
         <p v-for="par in desc">{{par}}</p>
         <br v-if="image.length>0">
         <img v-if="image.length>0" class="card_img" :src="image" :alt="alt_text">

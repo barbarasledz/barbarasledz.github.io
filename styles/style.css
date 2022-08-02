@@ -3,20 +3,34 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--darkest)
+    color: var(--offblack);
 }
 
 /* Making some variables because rewriting the same color 500 times gets old real fast... also this allows for easier and more consistent changes if I decide I don't like some color.*/
 :root {
-    --lightest: hsl(202, 60%, 97%);
-    --background_html: hsl(202, 50%, 95%);
+    /* The basic colors */
+    --background_html: hsl(202, 60%, 95%);
+    --offwhite: hsl(202, 60%, 97%);
+    --offblack: hsl(244, 100%, 3%);
+
+    /* General theme colors */
     --lighter:  hsl(202, 60%, 92%);
-    --darkest: hsl(244, 100%, 3%);
     --accentDark: hsl(244, 20%, 18%);
-    --accentLight: hsl(207, 74%, 85%);
-    --accentStrong: hsl(204, 55%, 61%);
+    --accentLight: hsl(207, 54%, 80%);
+    --accentStrong: hsl(214, 25%, 51%);
     --accentMid:hsl(207, 40%, 40%);
     --accentStrongLight: hsl(204, 55%, 74%);
+
+    /* Element colors */
+    --pageHeaderBackground: hsl(244, 20%, 18%);
+    --headerColor: hsl(207, 40%, 40%);
+    --navBackgroundLight: hsl(202, 60%, 92%);
+    --navBackgroundHover: hsl(207, 54%, 80%);
+    --navBackgroundClick: hsl(214, 25%, 41%);
+    --navActivePageMobile: hsl(244, 20%, 18%);
+    --navActivePagePC: hsl(244, 20%, 18%);
+
+    /* Other variables */
     --max_page_width: 1200px;
 }
 /* ============================= */ 
@@ -24,10 +38,10 @@
 /* ============================= */ 
 html, body {
     background-color: var(--background_html);
-    font-size: 16px;
+    font-size: 32px;
     font-family: Verdana, Helvetica, sans-serif;
 }
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Times New Roman', Times, serif;
     color:var(--accentMid)
 }
@@ -53,10 +67,8 @@ a:active {
     width: calc(100vw - (100vw - 100%));
     height: 100%;
     min-height: 100vh;
-    max-width: var(--max_page_width);
     margin: 0px auto;
-    border: 0px solid var(--accentDark);
-    background-color: var(--lightest);
+    background-color: var(--offwhite);
 }
 
 /* ============================= */
@@ -64,12 +76,13 @@ a:active {
 /* ============================= */
 header {
     padding: 8px 5px;
-    background-color: var(--accentDark);
+    background-color: var(--pageHeaderBackground);
     color: var(--lighter);
     align-items: middle;
+    font-size: 1rem;
 }
 header h1 {
-    font-size: 3.5rem;
+    font-size: 3.5em;
     text-align: center;
     margin:auto;
     font-weight: bolder;
@@ -93,14 +106,12 @@ header a:active {
 /* ============================= */
 nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: stretch;
-    min-height: 30px;
 }
 nav a {
-    min-width: 100px;
     text-align: center;
     flex-grow: 1;
     flex-basis: 1%;
@@ -108,36 +119,36 @@ nav a {
 }
 nav a div {
     height: 100%;
-    border: 2px solid var(--accentDark);
-    border-left: none;
+    border-top: 2px solid var(--accentDark);
     padding: 8px;
 }
-nav a:first-of-type div {
-    border-left: 2px solid var(--accentDark);
+nav a:last-of-type div {
+    border-bottom: 2px solid var(--accentDark);
 }
 #primary_nav {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     background-color: var(--lighter);
     font-weight: bold;
 }
 #primary_nav a:link {
-    color: var(--darkest);
+    color: var(--offblack);
 }
 #primary_nav a:hover{
-    color: var(--lightest);
-    background-color: var(--accentLight);
+    color: var(--offblack);
+    background-color: var(--navBackgroundHover);
 }
 #primary_nav a:active {
-    color: var(--lightest);
-    background-color: var(--accentStrong);
+    color: var(--offblack);
+    background-color: var(--navBackgroundHover);
 }
 /* Secondary navigation is hidden by default and shown using javascript, if applicable.*/
 #secondary_nav {
     display: none;
 }
 .active_nav {
-    background-color: var(--accentDark);
+    background-color: var(--navActivePageMobile);
     color: var(--lighter);
+    border-width: 0px;
 }
 
 /* ============================= */
@@ -160,32 +171,30 @@ main h1, h2 {
 }
 .card_container {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: stretch;
     align-content: flex-start;
-    column-gap: 10px;
     row-gap: 20px;
     max-width: 100%;
 }
 .card {
     padding: 10px;
-    flex-basis: 300px;
     min-height: 400px;
     overflow: hidden;
-    border: 2px solid var(--accentStrong);
-    background-color: var(--background_html);
+    border: 0px solid var(--accentStrong);
     border-radius: 0.2rem;
     flex-grow: 1;
 }  
-.card h1, .card h2, .card h3 {
+.card h1, .card h2, .card h3, .card h4 {
     margin: 8px 0;
 }
 .card_img {
     width: 100%;
-    max-height: 200px;
+    max-height: 350px;
     object-fit:scale-down;
-    position: top;
+    position:relative;
+    margin: 0 auto;
     margin-bottom: 10px;
 }
 
@@ -217,6 +226,98 @@ main h1, h2 {
     margin-top: 0;
 }
 
-/* @media only screen and (min-width:1000px) {
-    
-} */
+@media screen and (min-device-width:850px) {
+    /* Body and page container settings on a large screen */
+    html, body {
+        background-color: var(--background_html);
+        font-size: 16px;
+        font-family: Verdana, Helvetica, sans-serif;
+        color: var(--offblack);
+    }
+    #page_container {
+        width: calc(100vw - (100vw - 100%));
+        height: 100%;
+        min-height: 100vh;
+        max-width: var(--max_page_width);
+        margin: 0px auto;
+        border: 0px solid var(--accentDark);
+        background-color: var(--offwhite);
+    }
+    /* All the fun nav stuff! */
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        min-height: 30px;
+    }
+    nav a {
+        min-width: 100px;
+        text-align: center;
+        flex-grow: 1;
+        flex-basis: 1%;
+        text-decoration: none;
+    }
+    nav a div {
+        height: 100%;
+        border: 2px solid var(--accentDark);
+        border-left: none;
+        padding: 8px;
+    }
+    nav a:first-of-type div {
+        border-left: 2px solid var(--accentDark);
+    }
+    #primary_nav {
+        font-size: 1.5rem;
+        background-color: var(--lighter);
+        color: var(--offwhite);
+        font-weight: bold;
+    }
+    #primary_nav a:link div {
+        color: var(--offblack);
+    }
+    #primary_nav a:hover div {
+        color: var(--offblack);
+        background-color: var(--navBackgroundHover);
+    }
+    #primary_nav a:active div {
+        color: var(--offwhite);
+        background-color: var(--navBackgroundClick);
+    }
+    .active_nav {
+        background-color: var(--navActivePagePC);
+        color: var(--offwhite);
+    }
+    /* Handling of cards on a page */
+    .card_container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: stretch;
+        align-content: flex-start;
+        column-gap: 10px;
+        row-gap: 20px;
+        max-width: 100%;
+    }
+    .card {
+        padding: 10px;
+        flex-basis: 300px;
+        min-height: 400px;
+        overflow: hidden;
+        border: 2px solid var(--accentStrong);
+        background-color: var(--background_html);
+        border-radius: 0.2rem;
+        flex-grow: 1;
+    }  
+    .card h1, .card h2, .card h3, .card h4 {
+        margin: 8px 0;
+    }
+    .card_img {
+        width: 100%;
+        max-height: 200px;
+        object-fit:scale-down;
+        position: top;
+        margin-bottom: 10px;
+    }
+} 
