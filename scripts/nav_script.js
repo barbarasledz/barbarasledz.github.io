@@ -1,5 +1,9 @@
 primary_nav_values = [
     {
+        "text": "Home",
+        "url" : "index.html"
+    },
+    {
         "text": "About",
         "url": "about.html"
     },
