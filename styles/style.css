@@ -226,7 +226,7 @@ main h1, h2 {
     margin-top: 0;
 }
 
-@media screen and (min-device-width:850px) {
+@media screen and (min-device-width:800px) {
     /* Body and page container settings on a large screen */
     html, body {
         background-color: var(--background_html);
