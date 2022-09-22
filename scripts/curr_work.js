@@ -13,14 +13,15 @@ const cards_info = [
     {
         name: "Calculating Character Sheet for Night's Black Agents",
         type: "Personal Project",
-        date: "Planned (Fall 2022)",
+        date: "Summer 2022 -- ongiong",
         image: "",
         alt_text: "",
         desc: [
             "During college, I had discovered a personal love for TTRPGs. One of my favorite games quickly became Night's Black Agents.",
-            "However, the game has less character creation tools than a more popular game such as D&D. The tools it does have are functional but not the most intuitive for players to use.",
+            "However, the game has less character creation tools than a more popular game such as D&D. The tools it does have are functional but not always the most intuitive.",
             "This inspired me to make a calculating character sheet that is web-based and hopefully easier to use.",
-            "This project will heavily rely upon the Vue framework, which helps facilitate the site's many dozen interactive components."
+            "This project heavily relies upon the Vue framework, which helps facilitate the site's many dozen interactive components.",
+            "A link to the site will be added here once it is publicly available."
         ]
     },
 ]

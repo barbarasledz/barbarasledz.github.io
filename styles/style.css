@@ -9,7 +9,7 @@
 /* Making some variables because rewriting the same color 500 times gets old real fast... also this allows for easier and more consistent changes if I decide I don't like some color.*/
 :root {
     /* The basic colors */
-    --background_html: hsl(202, 60%, 92%);
+    --background_html: hsl(202, 60%, 95%);
     --offwhite: hsl(202, 60%, 97%);
     --offblack: hsl(244, 100%, 3%);
 
@@ -17,16 +17,18 @@
     --lighter:  hsl(202, 60%, 92%);
     --accentDark: hsl(244, 20%, 18%);
     --accentLight: hsl(207, 54%, 80%);
-    --accentMid:hsl(207, 30%, 40%);
-    --accentMidLight: hsl(214, 30%, 60%);
+    --accentStrong: hsl(214, 25%, 51%);
+    --accentMid:hsl(207, 40%, 40%);
+    --accentStrongLight: hsl(204, 55%, 74%);
 
     /* Element colors */
-    --containerWhite: hsl(202, 100%, 99%);
-    --pageHeaderBackground: var(--accentDark);
-    --navBackgroundLight: var(--lighter);
-    --navBackgroundHover: var(--accentLight);
+    --pageHeaderBackground: hsl(244, 20%, 18%);
+    --headerColor: hsl(207, 40%, 40%);
+    --navBackgroundLight: hsl(202, 60%, 92%);
+    --navBackgroundHover: hsl(207, 54%, 80%);
     --navBackgroundClick: hsl(214, 25%, 41%);
-    --navActivePage: var(--accentDark);
+    --navActivePageMobile: hsl(244, 20%, 18%);
+    --navActivePagePC: hsl(244, 20%, 18%);
 
     /* Other variables */
     --max_page_width: 1200px;
@@ -53,10 +55,10 @@ li {
     margin: 4px 0px;
 }
 a:link, a:visited {
-    color: var(--accentMid)
+    color: var(--accentStrong)
 }
 a:hover {
-    color: var(--accentMidLight)
+    color: var(--accentStrongLight)
 }
 a:active {
     color: var(--accentLight)
@@ -66,7 +68,7 @@ a:active {
     height: 100%;
     min-height: 100vh;
     margin: 0px auto;
-    background-color: var(--containerWhite);
+    background-color: var(--offwhite);
 }
 
 /* ============================= */
@@ -87,7 +89,7 @@ header h1 {
 }
 
 header a:link, header a:visited {
-    color: var(--offwhite);
+    color: var(--lighter);
     text-decoration: none;
 }
 
@@ -96,7 +98,7 @@ header a:hover {
     text-decoration: none;
 }
 header a:active {
-    color: var(--accentMidLight);
+    color: var(--accentStrong);
     text-decoration: none;
 }
 /* ============================= */
@@ -143,9 +145,9 @@ nav a:last-of-type div {
 #secondary_nav {
     display: none;
 }
-#primary_nav a:link div.active_nav {
-    background-color: var(--navActivePage);
-    color: var(--offwhite);
+.active_nav {
+    background-color: var(--navActivePageMobile);
+    color: var(--lighter);
     border-width: 0px;
 }
 
@@ -180,6 +182,7 @@ main h1, h2 {
     padding: 10px;
     min-height: 400px;
     overflow: hidden;
+    border: 0px solid var(--accentStrong);
     border-radius: 0.2rem;
     flex-grow: 1;
 }  
@@ -237,6 +240,8 @@ main h1, h2 {
         min-height: 100vh;
         max-width: var(--max_page_width);
         margin: 0px auto;
+        border: 0px solid var(--accentDark);
+        background-color: var(--offwhite);
     }
     /* All the fun nav stuff! */
     nav {
@@ -280,6 +285,10 @@ main h1, h2 {
         color: var(--offwhite);
         background-color: var(--navBackgroundClick);
     }
+    .active_nav {
+        background-color: var(--navActivePagePC);
+        color: var(--offwhite);
+    }
     /* Handling of cards on a page */
     .card_container {
         display: flex;
@@ -296,8 +305,8 @@ main h1, h2 {
         flex-basis: 300px;
         min-height: 400px;
         overflow: hidden;
-        border: 2px solid var(--accentMid);
-        background-color: var(--offwhite);
+        border: 2px solid var(--accentStrong);
+        background-color: var(--background_html);
         border-radius: 0.2rem;
         flex-grow: 1;
     }  
