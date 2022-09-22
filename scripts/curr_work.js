@@ -13,7 +13,7 @@ const cards_info = [
     {
         name: "Calculating Character Sheet for Night's Black Agents",
         type: "Personal Project",
-        date: "Summer 2022 -- ongiong",
+        date: "Planned (Fall 2022)",
         image: "",
         alt_text: "",
         desc: [

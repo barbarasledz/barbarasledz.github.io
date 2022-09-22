@@ -9,26 +9,25 @@
 /* Making some variables because rewriting the same color 500 times gets old real fast... also this allows for easier and more consistent changes if I decide I don't like some color.*/
 :root {
     /* The basic colors */
-    --background_html: hsl(202, 60%, 95%);
+    --background_html: hsl(202, 60%, 92%);
     --offwhite: hsl(202, 60%, 97%);
     --offblack: hsl(244, 100%, 3%);
 
     /* General theme colors */
-    --lighter:  hsl(202, 60%, 92%);
+    --lighter:  hsl(202, 60%, 95%);
     --accentDark: hsl(244, 20%, 18%);
     --accentLight: hsl(207, 54%, 80%);
-    --accentStrong: hsl(214, 25%, 51%);
-    --accentMid:hsl(207, 40%, 40%);
-    --accentStrongLight: hsl(204, 55%, 74%);
+    --accentMid:hsl(207, 30%, 40%);
+    --accentMidLight: hsl(214, 30%, 60%);
 
     /* Element colors */
-    --pageHeaderBackground: hsl(244, 20%, 18%);
+    --containerWhite: hsl(202, 100%, 99.5%);
+    --pageHeaderBackground: var(--accentDark);
     --headerColor: hsl(207, 40%, 40%);
-    --navBackgroundLight: hsl(202, 60%, 92%);
-    --navBackgroundHover: hsl(207, 54%, 80%);
+    --navBackgroundLight: var(--lighter);
+    --navBackgroundHover: var(--accentLight);
     --navBackgroundClick: hsl(214, 25%, 41%);
-    --navActivePageMobile: hsl(244, 20%, 18%);
-    --navActivePagePC: hsl(244, 20%, 18%);
+    --navActivePage: var(--accentDark);
 
     /* Other variables */
     --max_page_width: 1200px;
@@ -40,6 +39,7 @@ html, body {
     background-color: var(--background_html);
     font-size: 32px;
     font-family: Verdana, Helvetica, sans-serif;
+    color: var(--offblack);
 }
 h1, h2, h3, h4 {
     font-family: 'Times New Roman', Times, serif;
@@ -55,10 +55,10 @@ li {
     margin: 4px 0px;
 }
 a:link, a:visited {
-    color: var(--accentStrong)
+    color: var(--accentMid)
 }
 a:hover {
-    color: var(--accentStrongLight)
+    color: var(--accentMidLight)
 }
 a:active {
     color: var(--accentLight)
@@ -68,7 +68,7 @@ a:active {
     height: 100%;
     min-height: 100vh;
     margin: 0px auto;
-    background-color: var(--offwhite);
+    background-color: var(--containerWhite);
 }
 
 /* ============================= */
@@ -89,7 +89,7 @@ header h1 {
 }
 
 header a:link, header a:visited {
-    color: var(--lighter);
+    color: var(--offwhite);
     text-decoration: none;
 }
 
@@ -98,7 +98,7 @@ header a:hover {
     text-decoration: none;
 }
 header a:active {
-    color: var(--accentStrong);
+    color: var(--accentMidLight);
     text-decoration: none;
 }
 /* ============================= */
@@ -146,8 +146,8 @@ nav a:last-of-type div {
     display: none;
 }
 .active_nav {
-    background-color: var(--navActivePageMobile);
-    color: var(--lighter);
+    background-color: var(--navActivePage);
+    color: var(--offwhite);
     border-width: 0px;
 }
 
@@ -182,7 +182,6 @@ main h1, h2 {
     padding: 10px;
     min-height: 400px;
     overflow: hidden;
-    border: 0px solid var(--accentStrong);
     border-radius: 0.2rem;
     flex-grow: 1;
 }  
@@ -229,10 +228,8 @@ main h1, h2 {
 @media screen and (min-device-width:800px) {
     /* Body and page container settings on a large screen */
     html, body {
-        background-color: var(--background_html);
         font-size: 16px;
         font-family: Verdana, Helvetica, sans-serif;
-        color: var(--offblack);
     }
     #page_container {
         width: calc(100vw - (100vw - 100%));
@@ -240,30 +237,18 @@ main h1, h2 {
         min-height: 100vh;
         max-width: var(--max_page_width);
         margin: 0px auto;
-        border: 0px solid var(--accentDark);
-        background-color: var(--offwhite);
     }
     /* All the fun nav stuff! */
     nav {
-        display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: stretch;
         min-height: 30px;
     }
     nav a {
         min-width: 100px;
-        text-align: center;
-        flex-grow: 1;
-        flex-basis: 1%;
-        text-decoration: none;
     }
     nav a div {
-        height: 100%;
         border: 2px solid var(--accentDark);
         border-left: none;
-        padding: 8px;
     }
     nav a:first-of-type div {
         border-left: 2px solid var(--accentDark);
@@ -286,8 +271,9 @@ main h1, h2 {
         background-color: var(--navBackgroundClick);
     }
     .active_nav {
-        background-color: var(--navActivePagePC);
+        background-color: var(--navActivePage);
         color: var(--offwhite);
+        border-right: 2px solid var(--accentDark);
     }
     /* Handling of cards on a page */
     .card_container {
@@ -305,8 +291,8 @@ main h1, h2 {
         flex-basis: 300px;
         min-height: 400px;
         overflow: hidden;
-        border: 2px solid var(--accentStrong);
-        background-color: var(--background_html);
+        border: 2px solid var(--accentMid);
+        background-color: var(--lighter);
         border-radius: 0.2rem;
         flex-grow: 1;
     }  

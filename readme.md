@@ -16,6 +16,7 @@ This website is made primarily using HTML/CSS/JS, alongside with the Vue framewo
 - Late July 2022 -- Finished adding additional pages for about section, past work, and current work. 
 - 01 August 2022 -- Small updates to website content.
 - 18 August 2022 -- CSS overhaul to mobile-first, improvements in clarity (also removed resume link after some thought -- may add ability to request/contact for resume?)
+- 22 September 2022 -- updated some information, fixed contrast issues on website, more work on refractoring CSS code, addition of general-purpose "dev" branch to github repository after discovering discrepancies between localhost and github pages rendering of page (which caused a reversion to a previous commit)
 
 ## Credits
  - [Color palette inspired by coloors tool](https://coolors.co/e7ecef-6096ba-a3cef1-272635-001011) 
