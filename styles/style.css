@@ -273,7 +273,8 @@ main h1, h2 {
     .active_nav {
         background-color: var(--navActivePage);
         color: var(--offwhite);
-        border-right: 2px solid var(--accentDark);
+        border: 2px solid var(--accentDark);
+        border-left: none;
     }
     /* Handling of cards on a page */
     .card_container {
